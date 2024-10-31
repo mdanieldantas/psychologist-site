@@ -4,6 +4,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/ui/navbar"
+import { Card, CardContent } from "@/components/ui/card"
+
+import logoDan from "@/app/public/images/logo-menorpng.png"
+import HeaderImg from "@/app/public/images/imagem-sofá.jpg"
+import mulherNotIgm from "@/app/public/images/pessoaComNotebook.jpg"
+import terapeutaImg from "@/app/public/images/terapeuta-sobre.jpg"
+import mulherLivre from "@/app/public/images/soa-familiarolhando-por-cima-do-ombro.jpg"
+import amigasAbracadasIgm from "@/app/public/images/amigas-abraçadas.jpg"
 
 export function Page() {
   return (
@@ -14,7 +22,7 @@ export function Page() {
       {/* Hero Section */}
       <section className="relative">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagem-sof%C3%A1-ttonQG6Bd0hlewdY8FvVLIwAUTjCx8.jpg"
+          src={HeaderImg}
           alt="Background"
           width={1920}
           height={1080}
@@ -49,7 +57,7 @@ export function Page() {
             </div>
           </div>
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pessoaComNotebook-vqtDQH3xpix9p5FnTC8GQDqvux47z7.jpg"
+            src={mulherLivre}
             alt="Therapy session"
             width={600}
             height={400}
@@ -62,7 +70,7 @@ export function Page() {
       <section className="container mx-auto px-4 py-24">
         <div className="grid md:grid-cols-2 gap-12">
           <Image
-            src="/placeholder.svg"
+            src={terapeutaImg}
             alt="Professional photo"
             width={600}
             height={400}
@@ -79,12 +87,43 @@ export function Page() {
         </div>
       </section>
 
+        {/* Services Section */}
+        <section className="grid md:grid-cols-2 gap-12 mb-24">
+          <h2 className="text-[#583B1F] font-serif text-4xl border-b border-[#583B1F] pb-4">
+            I can help with
+          </h2>
+          <div className="space-y-12">
+            <Card className="bg-transparent border-none shadow-none">
+              <CardContent className="space-y-2">
+                <p className="text-[#583B1F]">01</p>
+                <h3 className="text-[#583B1F] font-serif text-2xl">Chronic stress</h3>
+                <p className="text-[#583B1F]">When stress becomes constant our mind, body, and spirit can wear down.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent border-none shadow-none">
+              <CardContent className="space-y-2">
+                <p className="text-[#583B1F]">02</p>
+                <h3 className="text-[#583B1F] font-serif text-2xl">Anxiety</h3>
+                <p className="text-[#583B1F]">Anxiety is a sense of dread and constant worry.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent border-none shadow-none">
+              <CardContent className="space-y-2">
+                <p className="text-[#583B1F]">03</p>
+                <h3 className="text-[#583B1F] font-serif text-2xl">Trauma</h3>
+                <p className="text-[#583B1F]">The experience of 'too much too fast' can trigger protection systems.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+
       {/* Services and About Section */}
       <section className="container mx-auto px-4 py-24">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="relative">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pessoaComNotebook-vqtDQH3xpix9p5FnTC8GQDqvux47z7.jpg"
+              src={mulherNotIgm}
               alt="Services"
               width={600}
               height={400}
@@ -96,7 +135,7 @@ export function Page() {
           </div>
           <div className="relative">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amigas-abra%C3%A7adas-gqfRTETCeZw9mk7n43gkhbPpf3tOgb.jpg"
+              src={amigasAbracadasIgm}
               alt="About"
               width={600}
               height={400}
@@ -115,7 +154,7 @@ export function Page() {
           <div className="flex items-center justify-center gap-8">
             <Link href="/pages/services" className="underline font-serif">SERVIÇOS</Link>
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/daniel-logo-sem-fundo-9oZ1b75ioxIk7AcO6zZlh3CCY02w5o.png"
+              src={logoDan}
               alt="Logo"
               width={100}
               height={40}
@@ -134,6 +173,7 @@ export function Page() {
           </div>
         </div>
       </footer>
+
     </div>
   )
 }

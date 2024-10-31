@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -34,13 +36,13 @@ export default function Navbar() {
           <Link href="/" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             INÍCIO
           </Link>
-          <Link href="/pages/about" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
+          <Link href="/about" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             SOBRE
           </Link>
-          <Link href="/pages/services" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
+          <Link href="/services" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             PSICOTERAPIA
           </Link>
-          <Link href="/pages/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
+          <Link href="/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             BLOG
           </Link>
           <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
@@ -49,18 +51,19 @@ export default function Navbar() {
         </div>
         <div className="flex-1 md:hidden"></div>
       </nav>
+
       {isOpen && (
         <div className="md:hidden flex flex-col items-center gap-4">
           <Link href="/" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             INÍCIO
           </Link>
-          <Link href="/pages/about" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
+          <Link href="/about" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             SOBRE
           </Link>
-          <Link href="/pages/services" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
+          <Link href="/services" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             PSICOTERAPIA
           </Link>
-          <Link href="/pages/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
+          <Link href="/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             BLOG
           </Link>
           <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
