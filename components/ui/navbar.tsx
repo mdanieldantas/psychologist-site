@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import LogoDan from "@/app/public/images/logo-menorpng.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +13,23 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
-        <Link href="/" className="w-32">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/daniel-logo-sem-fundo-9oZ1b75ioxIk7AcO6zZlh3CCY02w5o.png"
-            alt="Daniel Dantas Psicólogo"
-            width={150}
-            height={50}
-            className="h-auto w-full"
-          />
-        </Link>
+      <nav className="container mx-auto px-4 py-6 flex items-center justify-between bg-transparent">
+        <div className="flex-1 flex justify-start md:hidden">
+          <button onClick={toggleMenu} className="text-2xl mr-4">
+            {isOpen ? 'X' : '☰'}
+          </button>
+        </div>
+        <div className="flex-1 flex justify-center md:justify-start md:ml-4">
+          <Link href="/" className="block md:inline-block">
+            <Image
+              src={LogoDan}
+              alt="Daniel Dantas Psicólogo"
+              width={80}
+              height={24}
+              className="h-auto w-full md:w-32"
+            />
+          </Link>
+        </div>
         <div className="hidden md:flex items-center gap-8">
           <Link href="/" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             INÍCIO
@@ -35,15 +43,11 @@ export default function Navbar() {
           <Link href="/pages/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             BLOG
           </Link>
-          <Button variant="outline" className="border-[#583B1F] text-[#583B1F] hover:bg-[#583B1F] hover:text-white">
+          <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
             MARQUE UMA SESSÃO
           </Button>
         </div>
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-2xl mr-7">
-            {isOpen ? 'X' : '☰'}
-          </button>
-        </div>
+        <div className="flex-1 md:hidden"></div>
       </nav>
       {isOpen && (
         <div className="md:hidden flex flex-col items-center gap-4">
@@ -59,7 +63,7 @@ export default function Navbar() {
           <Link href="/pages/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
             BLOG
           </Link>
-          <Button variant="outline" className="border-[#583B1F] text-[#583B1F] hover:bg-[#583B1F] hover:text-white">
+          <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
             MARQUE UMA SESSÃO
           </Button>
         </div>
