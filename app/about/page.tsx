@@ -1,36 +1,37 @@
-
-import Navbar from "@/components/ui/navbar"
-import Image from "next/image"
+import Navbar from "@/components/ui/navbar" 
+import Image from "next/image" 
 import { Button } from "@/components/ui/button"
 
-
+import terapeutaImg from "@/app/public/images/terapeuta-sobre.jpg"
 
 export default function About() {
   return (
     <div className="min-h-screen bg-[#EAE6E1]">
-      {/* Navigation */} 
+      {/* Navigation */}
       <Navbar />
+
       {/* Hero Section */}
+
       <section className="container mx-auto px-4 py-24 grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-5xl font-serif text-[#583B1F]">
-            MEET CESHAUN HANKINS, LCSW
-          </h1>
-          <p className="text-[#583B1F]">EMDR therapist in Portland, Oregon</p>
-          <Button variant="outline" className="border-[#583B1F] text-[#583B1F] hover:bg-[#583B1F] hover:text-white">
-            LET'S CONNECT
-          </Button>
-        </div>
-        <div className="relative">
-          <Image
-            src="/placeholder.svg"
-            alt="Professional headshot"
-            width={500}
-            height={600}
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
-      </section>
+  <div className="space-y-6">
+    <h1 className="text-4xl md:text-5xl font-serif text-[#583B1F]">
+      MEET CESHAUN HANKINS, LCSW
+    </h1>
+    <p className="text-[#583B1F]">EMDR therapist in Portland, Oregon</p>
+    <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
+      LET'S CONNECT
+    </Button>
+  </div>
+  <div className="relative">
+    <Image
+      src={terapeutaImg}
+      alt="Professional headshot"
+      width={500}  // Ajuste a largura para 150
+      height={400} // Ajuste a altura para 200
+      className="w h-auto rounded-lg"
+    />
+  </div>
+</section>
 
       {/* About Section */}
       <section className="container mx-auto px-4 py-12">
@@ -45,7 +46,7 @@ export default function About() {
             I'm Black, biracial, a mother of all gender and queer, a partner, an oldest sister, daughter and friend. I'm originally from Southern California but gratefully enjoy the rain and seasons of Oregon.
           </p>
           <p>
-            My career has been multi-faceted (as life thread through it all has been social justice, service, and creativity). I was even a director of a cosmetology and esthetics school for a year! My hobbies include reading, cooking, travel and being a more gardener. I am wholeheartedly dedicated to my own relational practices.
+            My career has been multi-faceted (as life thread through it all has been social justice, service, and creativity). I was even a director of a cosmetology and esthetics school for a year! My hobbies include reading, cooking, travel e being a more gardener. I am wholeheartedly dedicated to my own relational practices.
           </p>
         </div>
       </section>
@@ -69,7 +70,7 @@ export default function About() {
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-xl font-serif text-[#583B1F]">03</h3>
+            <h className="text-xl font-serif text-[#583B1F]">03</h>
             <h4 className="text-2xl font-serif text-[#583B1F]">Ease</h4>
             <p className="text-[#583B1F]">
               I carry a personal value of living an easeful life. This isn't easy coming from someone who has worked since age 15. I believe that we're not here on Earth to work and produce but to be alive and experience joy and ease that life can also offer.
@@ -87,7 +88,7 @@ export default function About() {
             <p className="text-[#583B1F]">
               Individual therapy provides a collaborative opportunity to be seen and seen. You'll be supported with exploratory conversation, the learning of new skills founded in research and ancestral knowledge.
             </p>
-            <Button variant="outline" className="border-[#583B1F] text-[#583B1F] hover:bg-[#583B1F] hover:text-white">
+            <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
               LEARN MORE
             </Button>
           </div>
@@ -96,7 +97,7 @@ export default function About() {
             <p className="text-[#583B1F]">
               Growth and healing aren't solitary work. Stay tuned for opportunities to engage in communal support and knowledge sharing.
             </p>
-            <Button variant="outline" className="border-[#583B1F] text-[#583B1F] hover:bg-[#583B1F] hover:text-white">
+            <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
               COMING SOON
             </Button>
           </div>
@@ -120,12 +121,13 @@ export default function About() {
             residing on the traditional and ancestral homelands of the Cowlitz, Clackamas, Cayuse, Umatilla, Walla Walla, and 
             Multnomah People as well as the Confederated Tribes of the Siletz and the Confederated Tribes of the Grande Ronde.
           </p>
-          <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#583B1F]">
+          <Button variant="outline" className="border-white text-white bg-transparent hover:bg-white hover:text-[#583B1F]">
             BOOK A SESSION
           </Button>
           <p className="text-sm">ceshaun@psychotherapyhealth.com | 971-342-0403</p>
         </div>
       </footer>
+      
     </div>
-  )
+  );
 }
