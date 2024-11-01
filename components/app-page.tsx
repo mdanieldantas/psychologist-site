@@ -87,35 +87,44 @@ export function Page() {
         </div>
       </section>
 
-        {/* Services Section */}
-        <section className="grid md:grid-cols-2 gap-12 mb-24">
-          <h2 className="text-[#583B1F] font-serif text-4xl border-b border-[#583B1F] pb-4">
-            I can help with
-          </h2>
-          <div className="space-y-12">
-            <Card className="bg-transparent border-none shadow-none">
-              <CardContent className="space-y-2">
-                <p className="text-[#583B1F]">01</p>
-                <h3 className="text-[#583B1F] font-serif text-2xl">Chronic stress</h3>
-                <p className="text-[#583B1F]">When stress becomes constant our mind, body, and spirit can wear down.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-transparent border-none shadow-none">
-              <CardContent className="space-y-2">
-                <p className="text-[#583B1F]">02</p>
-                <h3 className="text-[#583B1F] font-serif text-2xl">Anxiety</h3>
-                <p className="text-[#583B1F]">Anxiety is a sense of dread and constant worry.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-transparent border-none shadow-none">
-              <CardContent className="space-y-2">
-                <p className="text-[#583B1F]">03</p>
-                <h3 className="text-[#583B1F] font-serif text-2xl">Trauma</h3>
-                <p className="text-[#583B1F]">The experience of 'too much too fast' can trigger protection systems.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+
+{/* I can help with */}
+<section className="container mx-auto px-4 py-24">
+  <div className="grid md:grid-cols-2 gap-12">
+
+    <div>
+      <h2 className="text-[#583B1F] font-serif text-5xl pb-2">
+        I can help with
+      </h2>
+      <hr className="border-[#583B1F] w-3/4 mb-4" />
+    </div>
+
+    <div className="space-y-12  mt-12" >
+      <Card className="bg-transparent border-none shadow-none">
+        <CardContent className="space-y-2">
+          <p className="text-[#583B1F]">01</p>
+          <h3 className="text-[#583B1F] font-serif text-2xl">Chronic stress</h3>
+          <p className="text-[#583B1F]">When stress becomes constant our mind, body, and spirit can wear down.</p>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-transparent border-none shadow-none">
+        <CardContent className="space-y-2">
+          <p className="text-[#583B1F]">02</p>
+          <h3 className="text-[#583B1F] font-serif text-2xl">Anxiety</h3>
+          <p className="text-[#583B1F]">Anxiety is a sense of dread and constant worry.</p>
+        </CardContent>
+      </Card>
+      <Card className="bg-transparent border-none shadow-none">
+        <CardContent className="space-y-2">
+          <p className="text-[#583B1F]">03</p>
+          <h3 className="text-[#583B1F] font-serif text-2xl">Trauma</h3>
+          <p className="text-[#583B1F]">The experience of 'too much too fast' can trigger protection systems.</p>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
 
 
       {/* Services and About Section */}
