@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-// import Navbar from "@/components/ui/navbar"
+import Navbar from "@/components/ui/navbar"
 import { Card, CardContent } from "@/components/ui/card"
 
 import logoDan from "@/app/public/images/logo-menorpng.png"
@@ -19,9 +19,9 @@ export function Page() {
     <div className="min-h-screen bg-[#EAE6E1]">
       {/* Navigation */}
 
-      {/* <Navbar /> */}
+      <Navbar />
 
-      <header className="absolute top-0 left-0 right-0 z-10 ">
+      {/* <header className="absolute top-0  left-0 right-0 z-10 ">
         <nav className="container mx-auto px-4 py-6 ">
           <div className="flex items-center justify-between mt-[2%] mb-[8%] mx-[4%]">
             <Link href="/" className="w-[15%]">
@@ -49,8 +49,9 @@ export function Page() {
             </div>
           </div>
         </nav>
-      </header>
+      </header> */}
 
+      
       {/* Hero Section */}
       <section className="">
         <Image

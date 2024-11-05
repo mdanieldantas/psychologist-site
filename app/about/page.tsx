@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 import terapeutaImg from "@/app/public/images/terapeuta-sobre.jpg"
+import LogoDan from "@/app/public/images/logo-menorpng.png";
 
 export default function About() {
   return (
@@ -70,7 +71,7 @@ export default function About() {
             </p>
           </div>
           <div className="space-y-4">
-            <h className="text-xl font-serif text-[#583B1F]">03</h>
+            <h3 className="text-xl font-serif text-[#583B1F]">03</h3>
             <h4 className="text-2xl font-serif text-[#583B1F]">Ease</h4>
             <p className="text-[#583B1F]">
               I carry a personal value of living an easeful life. This isn't easy coming from someone who has worked since age 15. I believe that we're not here on Earth to work and produce but to be alive and experience joy and ease that life can also offer.
@@ -108,7 +109,7 @@ export default function About() {
       <footer className="bg-[#583B1F] text-white py-12">
         <div className="container mx-auto px-4 text-center space-y-8">
           <Image
-            src="/placeholder.svg"
+            src={LogoDan}
             alt="Logo"
             width={100}
             height={40}

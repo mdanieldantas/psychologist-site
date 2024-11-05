@@ -7,6 +7,8 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import Navbar from "@/components/ui/navbar"
 
+import LogoDan from "@/app/public/images/logo-menorpng.png"
+
 export default function Blog() {
   return (
     <div className="min-h-screen bg-[#EAE6E1]">
@@ -20,7 +22,7 @@ export default function Blog() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <Image
-                  src="/placeholder.svg"
+                  src={LogoDan}
                   alt="Featured blog post"
                   width={600}
                   height={400}
@@ -48,7 +50,7 @@ export default function Blog() {
             <Card key={post} className="bg-white">
               <CardContent className="p-4">
                 <Image
-                  src="/placeholder.svg"
+                  src={LogoDan}
                   alt={`Blog post ${post}`}
                   width={400}
                   height={250}
@@ -122,7 +124,7 @@ export default function Blog() {
       <footer className="bg-[#583B1F] text-white py-12">
         <div className="container mx-auto px-4 text-center space-y-8">
           <Image
-            src="/placeholder.svg"
+            src= {LogoDan}
             alt="Logo"
             width={100}
             height={40}

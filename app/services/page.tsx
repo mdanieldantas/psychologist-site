@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Navbar from "@/components/ui/navbar"
+import LogoDan from "@/app/public/images/logo-menorpng.png"
 
 export default function Services() {
   return (
@@ -25,7 +26,7 @@ export default function Services() {
             <div className="absolute right-1/2 transform translate-x-16">
               <div className="w-40 h-40 rounded-full bg-[#8BA888] overflow-hidden">
                 <Image
-                  src="/placeholder.svg"
+                  src={LogoDan}
                   alt="Therapy session"
                   width={160}
                   height={160}
@@ -36,7 +37,7 @@ export default function Services() {
             <div className="absolute left-1/2 transform -translate-x-16">
               <div className="w-40 h-40 rounded-full bg-[#E8A87C] overflow-hidden">
                 <Image
-                  src="/placeholder.svg"
+                  src={LogoDan}
                   alt="Meditation"
                   width={160}
                   height={160}
@@ -145,7 +146,7 @@ export default function Services() {
       <footer className="bg-[#583B1F] text-white py-12">
         <div className="container mx-auto px-4 text-center space-y-8">
           <Image
-            src="/placeholder.svg"
+            src={LogoDan}
             alt="Logo"
             width={100}
             height={40}
