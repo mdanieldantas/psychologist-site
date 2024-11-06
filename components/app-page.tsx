@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import Navbar from "@/components/ui/navbar"
+// import Navbar from "@/components/ui/navbar"
 import { Card, CardContent } from "@/components/ui/card"
 
 import logoDan from "@/app/public/images/logo-menorpng.png"
@@ -12,6 +12,7 @@ import mulherNotIgm from "@/app/public/images/pessoaComNotebook.jpg"
 import terapeutaImg from "@/app/public/images/terapeuta-sobre.jpg"
 import mulherLivre from "@/app/public/images/soa-familiarolhando-por-cima-do-ombro.jpg"
 import amigasAbracadasIgm from "@/app/public/images/amigas-abraçadas.jpg"
+import Navbar from "./ui/navbar"
 
 export function Page() {
 
@@ -21,35 +22,8 @@ export function Page() {
 
       <Navbar />
 
-      {/* <header className="absolute top-0  left-0 right-0 z-10 ">
-        <nav className="container mx-auto px-4 py-6 ">
-          <div className="flex items-center justify-between mt-[2%] mb-[8%] mx-[4%]">
-            <Link href="/" className="w-[15%]">
-              <Image
-                src={logoDan}
-                alt="Daniel Dantas Psicólogo"
-                width={200}
-                height={100}
-                className="w-full h-auto"
-              />
-            </Link>
-            <div className="flex items-center space-x-6">
-              <Link href="#" className="text-sm text-[#735B43] hover:text-[#171616]">
-                Home
-              </Link>
-              <Link href="#" className="text-sm text-[#735B43] hover:text-[#171616]">
-                About
-              </Link>
-              <Link href="#" className="text-sm text-[#735B43] hover:text-[#171616]">
-                Contact
-              </Link>
-              <button className="rounded-none border border-[#735B43] px-8 py-2 text-sm text-[#735B43] hover:bg-[#735B43] hover:text-[#EAE6E1]">
-                Book a Call
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header> */}
+
+
 
       
       {/* Hero Section */}
@@ -106,13 +80,14 @@ export function Page() {
       {/* Help Section */}
       <section className="container mx-auto px-4 py-24">
         <div className="grid md:grid-cols-2 gap-12">
-          <Image
-            src={terapeutaImg}
-            alt="Professional photo"
-            width={600}
-            height={400}
-            className="rounded-lg"
-          />
+        <Image
+  src={terapeutaImg}
+  alt="Professional photo"
+  width={600}
+  height={400}
+  className="rounded-lg"
+  style={{ width: 'auto', height: 'auto' }}
+/>
           <div className="space-y-6">
             <h2 className="text-3xl font-serif text-[#583B1F]">Posso lhe ajudar</h2>
             <div className="space-y-4 text-[#583B1F] border-t border-b border-[#583B1F] py-8">

@@ -1,76 +1,48 @@
 "use client";
 
-import { useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import LogoDan from "@/app/public/images/logo-menorpng.png";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+
 
   return (
     <>
-      <nav className="container mx-auto px-4 py-6 flex items-center justify-between bg-transparent">
-        <div className="flex-1 flex justify-start md:hidden">
-          <button onClick={toggleMenu} className="text-2xl mr-4">
-            {isOpen ? 'X' : '☰'}
-          </button>
-        </div>
-        <div className="flex-1 flex justify-center md:justify-start md:ml-4">
-          <Link href="/" className="block md:inline-block">
-            <Image
-              src={LogoDan}
-              alt="Daniel Dantas Psicólogo"
-              width={80}
-              height={24}
-              className="h-auto w-full md:w-32"
-            />
-          </Link>
-        </div>
-        <div className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            INÍCIO
-          </Link>
-          <Link href="/about" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            SOBRE
-          </Link>
-          <Link href="/services" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            PSICOTERAPIA
-          </Link>
-          <Link href="/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            BLOG
-          </Link>
-          <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
-            MARQUE UMA SESSÃO
-          </Button>
-        </div>
-        <div className="flex-1 md:hidden"></div>
-      </nav>
-
-      {isOpen && (
-        <div className="md:hidden flex flex-col items-center gap-4">
-          <Link href="/" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            INÍCIO
-          </Link>
-          <Link href="/about" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            SOBRE
-          </Link>
-          <Link href="/services" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            PSICOTERAPIA
-          </Link>
-          <Link href="/blog" className="text-[#583B1F] hover:text-[#583B1F]/80 font-serif">
-            BLOG
-          </Link>
-          <Button variant="outline" className="border-[#583B1F] text-[#583B1F] bg-transparent hover:bg-[#583B1F] hover:text-white">
-            MARQUE UMA SESSÃO
-          </Button>
-        </div>
-      )}
+        <header className="absolute top-0  left-0 right-0 z-10 ">
+        <nav className="container mx-auto px-4 py-6 ">
+          <div className="flex items-center justify-between mt-[2%] mb-[8%] mx-[4%]">
+            <Link href="/" className="w-[15%]">
+              <Image
+                src={LogoDan}
+                alt="Daniel Dantas Psicólogo"
+                width={200}
+                height={100}
+                className="w-full h-auto"
+              />
+            </Link>
+            <div className="flex items-center space-x-6">
+              <Link href="/" className="text-sm text-[#735B43] hover:text-[#171616]">
+                Inicio
+              </Link>
+              <Link href="/about" className="text-sm text-[#735B43] hover:text-[#171616]">
+                Sobre
+              </Link>
+              <Link href="/services" className="text-sm text-[#735B43] hover:text-[#171616]">
+                Psicoterapia
+              </Link>
+              <Link href="/blog" className="text-sm text-[#735B43] hover:text-[#171616]">
+                Blog
+              </Link>
+              <button className="rounded-none border border-[#735B43] px-8 py-2 text-sm text-[#735B43] hover:bg-[#735B43] hover:text-[#EAE6E1]">
+                Book a Call
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
     </>
   );
 }
